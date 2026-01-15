@@ -15,6 +15,7 @@ The repository is organized into multiple versions, each representing a differen
 | llm_v6 | Advanced | Architectural enhancements | 🔧 WIP/Experimental |
 | llm_v7 | Advanced | Further architectural improvements | 🔧 WIP/Experimental |
 | llm_v8 | SOTA | LoRA, RoPE, Flash Attention, Grad Accum | 🌟 Flagship |
+| llm_v9 | Modern Arch | RMSNorm, SwiGLU, KV Cache, Fused Optimizer | 🚀 Latest |
 
 ## 🧠 Feature Progression
 
@@ -36,6 +37,12 @@ The repository is organized into multiple versions, each representing a differen
 - **Positional Embeddings**: Rotary Positional Embeddings (RoPE) replacing absolute embeddings
 - **Training Strategies**: Early stopping, warmup schedules, and adaptive learning rates
 
+### 4. Modern Architecture (Latest)
+- **Normalization**: RMSNorm for improved stability (used in Llama, Mistral, Falcon)
+- **Activation**: SwiGLU (Swish-Gated Linear Unit) for enhanced performance
+- **Generation**: KV Cache for dramatically faster text generation
+- **Optimization**: Fused AdamW optimizer for improved training speed
+
 ## 🛠 Tech Stack
 
 | Component | Technology |
@@ -52,17 +59,18 @@ This repo serves as a comprehensive resource for understanding:
 
 - **Transformer Architecture**: Deep dive into attention mechanisms and implementation
 - **Language Model Training**: End-to-end pipeline from data preprocessing to evaluation
-- **Advanced Techniques**: Modern methods like LoRA and RoPE
+- **Advanced Techniques**: Modern methods like LoRA, RoPE, RMSNorm, and SwiGLU
 - **Implementation Details**: Practical considerations for training large models
 - **Performance Optimization**: Techniques to make training faster and more efficient
+- **Modern Architectures**: Understanding RMSNorm, SwiGLU, and KV Cache mechanisms
 
 ## ⚡ Getting Started
 
 Each version is designed to run independently.
 
 ```bash
-cd llm_v8  # or any other version
-python llm_v8.py
+cd llm_v9  # or any other version (llm_v2 through llm_v9)
+python llm_v9.py
 ```
 
 ### Prerequisites
